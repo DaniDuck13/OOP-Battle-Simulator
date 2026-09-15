@@ -11,7 +11,7 @@ def main():
     print("The gates are opening...")
 
     goblin = Goblin("Bartholomew")
-    hero= Hero("Merida", "Hacker")
+    hero= Hero((input("What would you like to name your hero? ")), "Hacker")
 
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
   
