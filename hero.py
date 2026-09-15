@@ -2,10 +2,12 @@ import random
 class Hero:
     """The hero blueprint will be implemented later in the project."""
 
-    def __init__(self,name):
+    def __init__(self,name,heroClass):
+        #heroClass can be Hacker, Archer, Mage, Swordsman, or Alchemist
         self.name=name
         self.health=125
         self.attackPower=10
+        self.hero_class=heroClass
 
     def attack(self):
         return random.randint(1,self.attackPower)

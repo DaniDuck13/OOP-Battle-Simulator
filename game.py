@@ -11,7 +11,7 @@ def main():
     print("The gates are opening...")
 
     goblin = Goblin("Gribble")
-    hero= Hero("Merida")
+    hero= Hero("Merida", "Hacker")
 
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
   
@@ -19,7 +19,7 @@ def main():
     
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
     print("But no hero has answered the call... yet.")
-    print(f"{hero.name} enters the arena with {hero.health} health.")
+    print(f"{hero.name} the {hero.hero_class} enters the arena with {hero.health} health.")
 
     print(f"{hero.name} attacks {goblin2.name}.")
     goblin2.take_damage(hero.attack())
