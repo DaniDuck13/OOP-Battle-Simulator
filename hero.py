@@ -5,13 +5,14 @@ class Hero:
     def __init__(self,name,heroClass):
         #heroClass can be Hacker, Archer, Mage, Swordsman, or Alchemist
         self.name=name
-        self.health=125
-        self.attackPower=10
+        self.health=50
+        self.attackPower=15
         self.hero_class=heroClass
 
     def attack(self):
         return random.randint(1,self.attackPower)
     def takeDamage(self,damage):
         self.health= max(0, self.health-damage)
+        print(f"{self.name} takes {damage} damage. Health: {self.health}")
     def isAlive(self):
-        print("{self.name} takes {damage} damage. Health {self.health}." )
+        return self.health > 0

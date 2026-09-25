@@ -6,7 +6,7 @@ class Goblin:
 
     def __init__(self, name):
         self.name = name
-        self.health = 100
+        self.health = 50
         self.attack_power = 15
 
     def attack(self):

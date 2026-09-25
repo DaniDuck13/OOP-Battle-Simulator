@@ -2,6 +2,17 @@ from goblin import Goblin
 from hero import Hero
 
 ARENA_NAME = "The Black Hole"
+def battle(hero: Hero, enemy: Goblin):
+    while hero.isAlive() and enemy.is_alive():
+        hero_damage=hero.attack()
+        enemy.take_damage(hero_damage)
+        if enemy.is_alive:
+           enemy_damage=enemy.attack()
+           hero.takeDamage(enemy_damage)
+    if hero.isAlive():
+        print(f"{hero.name} won the battle!")
+    else:
+        print(f"{enemy.name} won the battle!")
 
 
 def main():
@@ -21,9 +32,7 @@ def main():
     print("But no hero has answered the call... yet.")
     print(f"{hero.name} the {hero.hero_class} enters the arena with {hero.health} health.")
 
-    print(f"{hero.name} attacks {goblin2.name}.")
-    goblin2.take_damage(hero.attack())
-    
+    battle(hero, goblin2)
 
 
 if __name__ == "__main__":
